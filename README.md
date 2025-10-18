@@ -45,7 +45,7 @@ $ php artisan db:seed<br>
 Laravel 8.83.8<br>
 <br>
 ## ER図<br>
-![Image](https://github.com/user-attachments/assets/b079f09a-5d04-42da-bef1-0bb811e39925)<br>
+<img width="841" height="241" alt="Image" src="https://github.com/user-attachments/assets/6c7da902-3d2b-411e-a16f-ba5c3bb8f2ef" /><br>
 <br>
 ## URL<br>
 - 例) 開発環境：http://localhost/<br>
