@@ -1,0 +1,141 @@
+.form__error {
+  margin-top: 4px;
+  height: 20px;
+  color: #ff0000;
+  text-align: left;
+}
+
+.header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  margin: 0;
+  padding: 5px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* 左寄せ（右寄せならflex-end） */
+  padding: 20px 20px;
+}
+
+.header__logo {
+  text-decoration: none;
+  font-family: 'Dancing Script', cursive; /* 筆記体例 */
+  color: orange;
+}
+
+.header__logo h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0; /* h1のデフォルトmarginをリセット！←これ超重要 */
+  line-height: 1; /* 行間を詰める */
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%; /* 丸くする */
+  border: 2px solid #333;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #333; /* チェックされたら塗りつぶし */
+}
+
+.content_background{
+  background-color:lightgray;
+}
+
+/* 丸いチェックボックス風デザイン */
+.season-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%; /* 丸くする */
+  border: 2px solid #333;
+  cursor: pointer;
+  position: relative;
+  background-color: white;
+  vertical-align: middle;
+  transition: all 0.2s ease;
+}
+
+/* チェックされたとき：背景を黒にして、白い✔を表示 */
+.season-checkbox:checked {
+  background-color: #333;
+  border-color: #333;
+}
+
+.season-checkbox:checked::after {
+  content: "✔";
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%); /* ✔を中央に配置 */
+}
+
+/* チェックボックス全体のグループ */
+.season-group {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.season-option {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+}
+
+.page_button-group {
+  display: flex;
+  gap: 10px; /* ボタンの間の余白 */
+  justify-content: center; /* 中央寄せ */
+  margin-top: 20px;
+}
+
+.page_button {
+  width: 10%; /* ← ここがポイント！画面全体の10%幅 */
+  min-width: 100px; /* 画面が小さい時に極端に小さくならないように */
+  text-align: center;
+  padding: 10px 0;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* hover時の色 */
+.page_button:hover {
+  background-color: #0056b3;
+}
+
+/* aタグとbuttonの見た目を統一 */
+.page_button:active {
+  transform: scale(0.98);
+}
+
+.return_page_button{
+  background-color: gray;
+}
+
+.update_page_button{
+  background-color: orange;
+}
