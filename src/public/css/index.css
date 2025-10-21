@@ -1,0 +1,158 @@
+.h1-padding {
+  padding: 0;
+  margin: 0;
+}
+
+.page-header {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.register-button {
+  width: 150px;
+  height: 30px;
+  background-color: orange;
+  border: 1px solid orange;
+  box-shadow: none;
+  outline: none;
+  border-radius: 0;
+  appearance: none;
+  margin-right: 32px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 10px;
+}
+
+.page-btn {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d1d5db;
+  background-color: white;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.page-btn:hover {
+  background-color: #f3f4f6;
+}
+
+.page-btn.current {
+  background-color: #f97316;
+  color: white;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.page-btn.disabled {
+  background-color: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+  border: none;
+}
+
+.search-edit-text {
+  width: 150px;
+  height: 30px;
+  padding: 10px 10px;
+  border-radius: 15px;
+  margin: 18px 0 3px 0;
+  text-align: left;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.search-option {
+  width: 150px;
+  height: 30px;
+  padding: 0px 0px;
+  margin: 3px 0 3px 0;
+  text-align: left;
+  background-color: white;
+}
+
+.search-button {
+  width: 150px;
+  height: 30px;
+  background-color: rgb(255, 174, 66);
+  border: 1px solid rgb(255, 174, 66);
+  box-shadow: none;
+  outline: none;
+  border-radius: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.search-circle-button-outline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 150px;
+  height: 30px;
+  border-radius: 15px;
+  border: 2px solid orange;
+  padding: 0 10px;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.search-circle-button-outline div {
+  font-size: 14px;
+  color: black;
+}
+
+.circle-button {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid orange;
+  background-color: white;
+  color: orange;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0;
+}
+
+.card-setting-section {
+  display: flex;
+  align-items: flex-start;
+}
+
+.card-section {
+  margin: 0px;
+}
+
+.card-body {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 0px;
+  background: rgba(255, 255, 255, 0);
+}
+
+.price-note {
+  padding-top: 15px;
+  font-weight: bold;
+  color: black;
+  font-size: 15px;
+}

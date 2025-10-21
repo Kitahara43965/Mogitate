@@ -1,0 +1,56 @@
+.edit-text {
+  width: 300px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  text-align: left;
+  background-color: white;
+}
+
+.description-edit-text {
+  width: 50%;
+  height: 150px;
+  width: 700px;
+  border-radius: 5px;
+  background-color: white;
+  padding: 0.5em;
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid lightgray;
+  resize: none;
+}
+
+.edit-container {
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.custom-file {
+  position: relative;
+  margin-left: 0px;
+}
+
+.custom-file input[type="file"] {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.edit-upper-container {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-upper-right-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-upper-left-container {
+  width: 400px;
+}

@@ -6,11 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateSeasonsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('seasons', function (Blueprint $table) {
@@ -20,12 +15,7 @@ class CreateSeasonsTable extends Migration
             $table->timestamp('updated_at')->useCurrent()->nullable();
         });
     }
-
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
+    
     public function down()
     {
         Schema::dropIfExists('seasons');

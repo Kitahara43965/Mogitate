@@ -5,14 +5,11 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use App\Models\Product;
+use App\Models\Season;
 
 class ProductsTableSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
+    
     public function run()
     {
         $initialProductsTable = [
@@ -97,5 +94,35 @@ class ProductsTableSeeder extends Seeder
 
         DB::table('seasons')->insert($initialSeasonsTable);
 
+        // 例: Product と Season を取得
+        $kiwi = Product::firstOrCreate(['name' => 'キウイ']);
+        $strawberry = Product::firstOrCreate(['name' => 'ストロベリー']);
+        $orange = Product::firstOrCreate(['name' => 'オレンジ']);
+        $watermelon = Product::firstOrCreate(['name' => 'スイカ']);
+        $peach = Product::firstOrCreate(['name' => 'ピーチ']);
+        $muscat = Product::firstOrCreate(['name' => 'シャインマスカット']);
+        $pineapple = Product::firstOrCreate(['name' => 'パイナップル']);
+        $grapes = Product::firstOrCreate(['name' => 'ブドウ']);
+        $banana = Product::firstOrCreate(['name' => 'バナナ']);
+        $melon = Product::firstOrCreate(['name' => 'メロン']);
+
+        $spring = Season::firstOrCreate(['name' => '春']);
+        $summer = Season::firstOrCreate(['name' => '夏']);
+        $autumn = Season::firstOrCreate(['name' => '秋']);
+        $winter = Season::firstOrCreate(['name' => '冬']);
+
+        $kiwi->seasons()->attach([$autumn->id, $winter->id]);
+        $strawberry->seasons()->attach([$spring->id]);
+        $orange->seasons()->attach([$winter->id]);
+        $watermelon->seasons()->attach([$summer->id]);
+        $peach->seasons()->attach([$summer->id]);
+        $muscat->seasons()->attach([$summer->id, $autumn->id]);
+        $pineapple->seasons()->attach([$spring->id, $summer->id]);
+        $grapes->seasons()->attach([$summer->id, $autumn->id]);
+        $banana->seasons()->attach([$summer->id]);
+        $melon->seasons()->attach([$spring->id, $summer->id]);
+
     }
 }
+
+

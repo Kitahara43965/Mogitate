@@ -1,6 +1,6 @@
 ## アプリケーション名
 
-OtoiawaseForm
+Mogitate
 
 ## 環境構築
 
@@ -49,3 +49,4 @@ Laravel 8.83.8<br>
 <br>
 ## URL<br>
 - 例) 開発環境：http://localhost/<br>
+

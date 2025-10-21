@@ -1,7 +1,21 @@
+::placeholder {
+  color: gray;
+}
+
+.form__error_group {
+  padding-left: 0px;
+  margin-left: 0px;
+  text-align: left;
+}
+
 .form__error {
   margin-top: 4px;
   height: 20px;
   color: #ff0000;
+  text-align: left;
+  list-style-type: none;
+  padding-left: 0px;
+  margin-left: 0px;
   text-align: left;
 }
 
@@ -13,27 +27,35 @@
   background-color: white;
   margin: 0;
   padding: 5px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .header__inner {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* 左寄せ（右寄せならflex-end） */
+  justify-content: flex-start;
   padding: 20px 20px;
 }
 
 .header__logo {
+  all: unset;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   text-decoration: none;
-  font-family: 'Dancing Script', cursive; /* 筆記体例 */
-  color: orange;
+  font-family: "Dancing Script", cursive;
+  font-size: 30px !important;
+  color: rgb(255, 174, 66);
+  cursor: pointer;
 }
 
-.header__logo h1 {
-  font-size: 28px;
-  font-weight: bold;
-  margin: 0; /* h1のデフォルトmarginをリセット！←これ超重要 */
-  line-height: 1; /* 行間を詰める */
+.header__logo:focus {
+  outline: none;
+}
+
+.header__logo::-moz-focus-inner {
+  border: 0;
+  padding: 0;
 }
 
 input[type="checkbox"] {
@@ -46,22 +68,66 @@ input[type="checkbox"] {
   vertical-align: middle;
 }
 
+.body-class {
+  background-color: rgb(245, 245, 245);
+}
+
+.return-home-href-group {
+  display: flex;
+}
+
+.return-home-href {
+  text-decoration: none;
+  color: blue;
+  margin-right: 8px;
+}
+
 input[type="checkbox"]:checked {
-  background-color: #333; /* チェックされたら塗りつぶし */
+  background-color: #333;
 }
 
-.content_background{
-  background-color:lightgray;
+input[type="file"]::-webkit-file-upload-button {
+  visibility: hidden;
+}
+input[type="file"]::file-selector-button {
+  visibility: hidden;
 }
 
-/* 丸いチェックボックス風デザイン */
+.file-upload-button {
+  width: 8%;
+  height: 24px;
+  text-align: center;
+  font-size: 11px;
+  padding: 3px 3px;
+  min-width: 100px;
+  background-color: rgb(230, 230, 230);
+  border: 1px solid black;
+  border-radius: 0px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s;
+  color: #000000;
+}
+
+.image-name-edit-text {
+  height: 24px;
+  border: 0;
+  color: gray;
+  background-color: rgba(230, 230, 230, 0);
+}
+
+.file-upload-commands {
+  margin-top: 3px;
+  display: flex;
+}
+
 .season-checkbox {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   width: 20px;
   height: 20px;
-  border-radius: 50%; /* 丸くする */
+  border-radius: 50%;
   border: 2px solid #333;
   cursor: pointer;
   position: relative;
@@ -70,7 +136,6 @@ input[type="checkbox"]:checked {
   transition: all 0.2s ease;
 }
 
-/* チェックされたとき：背景を黒にして、白い✔を表示 */
 .season-checkbox:checked {
   background-color: #333;
   border-color: #333;
@@ -83,38 +148,44 @@ input[type="checkbox"]:checked {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -55%); /* ✔を中央に配置 */
+  transform: translate(-50%, -55%);
 }
 
-/* チェックボックス全体のグループ */
+.show-season-group-location {
+  margin-left: 52px;
+}
+
+.edit-season-group-location {
+  margin-left: 0px;
+}
+
 .season-group {
   display: flex;
-  gap: 15px;
   flex-wrap: wrap;
-  align-items: center;
+  gap: 15px;
+  justify-content: left;
 }
 
 .season-option {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 5px;
-  font-size: 14px;
+  cursor: pointer;
 }
 
-.page_button-group {
+.page-button-group {
   display: flex;
-  gap: 10px; /* ボタンの間の余白 */
-  justify-content: center; /* 中央寄せ */
+  gap: 10px;
+  justify-content: center;
   margin-top: 20px;
 }
 
-.page_button {
-  width: 10%; /* ← ここがポイント！画面全体の10%幅 */
-  min-width: 100px; /* 画面が小さい時に極端に小さくならないように */
+.page-button {
+  width: 10%;
+  min-width: 100px;
   text-align: center;
-  padding: 10px 0;
   border: none;
-  border-radius: 8px;
+  border-radius: 2px;
   color: white;
   text-decoration: none;
   font-size: 16px;
@@ -122,20 +193,211 @@ input[type="checkbox"]:checked {
   transition: background-color 0.2s;
 }
 
-/* hover時の色 */
-.page_button:hover {
-  background-color: #0056b3;
-}
-
-/* aタグとbuttonの見た目を統一 */
-.page_button:active {
+.page-button:active {
   transform: scale(0.98);
 }
 
-.return_page_button{
-  background-color: gray;
+.return-page-button {
+  background-color: rgb(230, 230, 230);
+  font-size: 11px;
+  vertical-align: middle;
+  color: black;
+  padding: 5px 0;
 }
 
-.update_page_button{
+.update-page-button {
   background-color: orange;
+  font-size: 11px;
+  vertical-align: middle;
+  color: black;
+  padding: 5px 0;
+}
+
+.delete-page-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.data-label-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.data-label-row-title {
+  font-weight: bold;
+}
+
+.must-item {
+  background-color: #e53935;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 0px;
+}
+
+.notice-item {
+  color: red;
+}
+
+.content-blocks {
+  padding: 10px;
+  text-align: center;
+}
+
+.center-child-block {
+  text-align: center;
+}
+
+.left-child-block {
+  text-align: left;
+}
+
+.right-child-block {
+  text-align: right;
+}
+
+.input-field-block {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.inner-input-field-block {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.image-preview-container {
+  text-align: center;
+}
+
+.preview-image {
+  width: 300px !important;
+  height: 200px !important;
+  object-fit: cover;
+  display: inline-block;
+  border-radius: 0 0 0 0;
+}
+
+.product-card {
+  display: block;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.image-preview-container {
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+}
+
+.preview-image {
+  max-width: 300px;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 12px;
+  background-color: #fff;
+  font-size: 16px;
+}
+
+.product-name {
+  color: black;
+}
+
+.product-price {
+  color: black;
+}
+
+.image-button {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #f0f0f0;
+  border-radius: 6px;
+  text-decoration: none;
+  color: black;
+}
+
+.image-button:hover {
+  background-color: #dcdcdc;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.trash-button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -40px;
+  right: 50px;
+}
+
+.right-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.trash-image {
+  width: 30px;
+  height: 30px;
+}
+
+.wrapper {
+  width: 700px;
+  margin: 0 auto;
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+  min-height: 300px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.left-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1;
+  min-width: 0;
 }
