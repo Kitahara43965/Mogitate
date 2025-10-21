@@ -49,9 +49,9 @@
         </div>
         <div class="left-child-block">
             @if ($errors->has('name'))
-                <ul class="form__error_group">
+                <ul class="form-error-group">
                     @foreach ($errors->get('name') as $error)
-                        <li class="form__error">{{ $error }}</li>
+                        <li class="form-error">{{ $error }}</li>
                     @endforeach
                 </ul>
             @endif
@@ -83,9 +83,9 @@
         </div>
         <div class="left-child-block">
             @if ($errors->has('price'))
-                <ul class="form__error_group">
+                <ul class="form-error-group">
                     @foreach ($errors->get('price') as $error)
-                        <li class="form__error">{{ $error }}</li>
+                        <li class="form-error">{{ $error }}</li>
                     @endforeach
                 </ul>
             @endif
@@ -153,9 +153,9 @@
             
             <div class="left-child-block">
                @if ($errors->has('image'))
-                    <ul class="form__error_group">
+                    <ul class="form-error-group">
                         @foreach ($errors->get('image') as $error)
-                            <li class="form__error">{{ $error }}</li>
+                            <li class="form-error">{{ $error }}</li>
                         @endforeach
                     </ul>
                 @endif
@@ -217,9 +217,9 @@
         </div>
         <div class="left-child-block">
             @if ($errors->has('selectedSeasons'))
-                <ul class="form__error_group">
+                <ul class="form-error-group">
                     @foreach ($errors->get('selectedSeasons') as $error)
-                        <li class="form__error">{{ $error }}</li>
+                        <li class="form-error">{{ $error }}</li>
                     @endforeach
                 </ul>
             @endif
@@ -252,9 +252,9 @@
         </div>
         <div class="left-child-block">
             @if ($errors->has('description'))
-                <ul class="form__error_group">
+                <ul class="form-error-group">
                     @foreach ($errors->get('description') as $error)
-                        <li class="form__error">{{ $error }}</li>
+                        <li class="form-error">{{ $error }}</li>
                     @endforeach
                 </ul>
             @endif

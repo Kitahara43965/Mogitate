@@ -2,13 +2,13 @@
   color: gray;
 }
 
-.form__error_group {
+.form-error-group {
   padding-left: 0px;
   margin-left: 0px;
   text-align: left;
 }
 
-.form__error {
+.form-error {
   margin-top: 4px;
   height: 20px;
   color: #ff0000;
@@ -30,14 +30,14 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.header__inner {
+.header-inner {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding: 20px 20px;
 }
 
-.header__logo {
+.header-logo {
   all: unset;
   appearance: none;
   -webkit-appearance: none;
@@ -49,11 +49,11 @@
   cursor: pointer;
 }
 
-.header__logo:focus {
+.header-logo:focus {
   outline: none;
 }
 
-.header__logo::-moz-focus-inner {
+.header-logo::-moz-focus-inner {
   border: 0;
   padding: 0;
 }

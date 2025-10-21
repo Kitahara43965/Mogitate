@@ -12,9 +12,9 @@
 </head>
 
 <body class="body-class">
-    <header class="header">    
-        <div class="header__inner">
-            <a href="{{route('products.index')}}" class="header__logo">Mogitate</a>
+    <header class="header">
+        <div class="header-inner">
+            <a href="{{route('products.index')}}" class="header-logo">Mogitate</a>
         </div>
     </header>
     @yield('content')
