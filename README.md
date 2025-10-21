@@ -26,7 +26,7 @@ $ composer install<br>
 $ cp .env.example .env<br>
 と入力し、.env ファイルを複製します。<br>
 (ハ-2) .env ファイルで<br>
-APP_LOCALE=ja {追加}<br>
+APP_LOCALE=ja {APP_NAMEの上に追加}<br>
 DB_HOST=mysql<br>
 DB_PORT=3306<br>
 DB_DATABASE=laravel_db<br>
@@ -35,7 +35,7 @@ DB_PASSWORD=laravel_pass<br>
 とします。<br>
 (ハ-3) php コンテナ上で<br>
 $ php artisan key:generate<br>
-$ php artisan migrate {もしくは $ php artisan migrate:fresh}<br>
+$ php artisan migrate:fresh {もしくは $ php artisan migrate}<br>
 $ php artisan db:seed<br>
 と入力します。<br>
 <br>
@@ -55,3 +55,4 @@ Laravel 8.83.8<br>
 ## URL<br>
 
 - 例) 開発環境：http://localhost/<br>
+
