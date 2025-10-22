@@ -7,7 +7,8 @@ Mogitate
 (イ) ローカルリポジトリの設定<br>
 ローカルリポジトリを作成するディレクトリにおいてコマンドライン上で<br>
 $ `git clone git@github.com:Kitahara43965/Mogitate.git`<br>
-$ mv Mogitate (ローカルリポジトリ名)<br>
+$ mv Mogitate (ローカルリポジトリ名){OS:apple}<br>
+$ rename Mogitate (ローカルリポジトリ名){OS:windows}<br>
 とすればリモートリポジトリのクローンが生成され、所望のローカルリポジトリ名のディレクトリが得られます。<br>
 <br>
 (ロ) docker の設定<br>
@@ -38,7 +39,7 @@ $ php artisan key:generate<br>
 $ php artisan migrate:fresh {もしくは $ php artisan migrate}<br>
 $ php artisan db:seed<br>
 と入力します。<br>
-さらに、
+さらに、<br>
 rm public/storage {既存のリンクを削除}<br>
 php artisan storage:link {再度リンクの作成}<br>
 をすることで web アプリが起動します。<br>
