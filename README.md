@@ -38,8 +38,10 @@ $ php artisan key:generate<br>
 $ php artisan migrate:fresh {もしくは $ php artisan migrate}<br>
 $ php artisan db:seed<br>
 と入力します。<br>
-<br>
-以上で web アプリが起動します。<br>
+さらに、
+rm public/storage {既存のリンクを削除}<br>
+php artisan storage:link {再度リンクの作成}<br>
+をすることで web アプリが起動します。<br>
 <br>
 
 ## 使用技術(実行環境)<br>
