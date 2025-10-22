@@ -8,7 +8,7 @@ Mogitate
 ローカルリポジトリを作成するディレクトリにおいてコマンドライン上で<br>
 $ `git clone git@github.com:Kitahara43965/Mogitate.git`<br>
 $ mv Mogitate (ローカルリポジトリ名){OS:apple}<br>
-$ rename Mogitate (ローカルリポジトリ名){OS:windows}<br>
+$ rename Mogitate (ローカルリポジトリ名){OS:windows,コマンドプロンプト}<br>
 とすればリモートリポジトリのクローンが生成され、所望のローカルリポジトリ名のディレクトリが得られます。<br>
 <br>
 (ロ) docker の設定<br>
